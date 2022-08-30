@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  VowelTester
+//  Hello3
 //
 //  Created by Dasari,Venkata Sai Ram on 8/30/22.
 //
@@ -9,26 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var enteredtext: UITextField!
+    @IBOutlet weak var Textbutton: UITextField!
     
-    @IBOutlet weak var displayLabel: UILabel!
     
+    @IBAction func SubmitChecked(_ sender: Any) {
+        //Read text from text field and assign it ti a local variable
+        var name=Textbutton.text!;
+        Label.text="Hello,\(name)";
+    }
+    @IBOutlet weak var Label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func submitbuttonclicked(_ sender: UIButton) {
-        // Read the text from the text field and assign it to a local variable and check the text has vowel or not
-        var text=enteredtext.text!;
-        if(text.contains("a")||text.contains("e")||text.contains("i")||text.contains("o")||text.contains("u"))
-        {
-            displayLabel.text="The text has Vowel"
-        }
-        else{
-            displayLabel.text="The text has no Vowel"
-        }
-    }
-    
+
 }
 
